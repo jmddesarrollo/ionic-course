@@ -17,15 +17,19 @@ export class ModalPage implements OnInit {
 
   async mostrarModal() {
 
+    // Creación del modal pasando información del componente padre al modal hijo
     const modal = await this.modalCtrl.create({
       component: ModalInfoPage,
       componentProps: {
-        nombre: 'Fernando',
-        pais: 'Costa Rica'
+        nombre: 'Rafael Nadal',
+        pais: 'España'
       }
     });
     
     await modal.present();
+
+    // onDidDismiss:  En el momento en el que se cierra completamente el modal
+    // onWillDismiss: En el momento en el que se inicia el cierra del modal (se recoge antes que en onDidDimiss)
 
     // const { data } = await modal.onDidDismiss();
     const { data } = await modal.onWillDismiss();

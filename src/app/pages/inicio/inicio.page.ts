@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+// import { MenuController } from '@ionic/angular';
 import { Componente } from '../../interfaces/interfaces';
 import { Observable } from 'rxjs';
 import { DataService } from '../../services/data.service';
@@ -14,15 +14,17 @@ export class InicioPage implements OnInit {
 
   componentes: Observable<Componente[]>;
 
-  constructor( private menuCtrl: MenuController,
-               private dataService: DataService ) { }
+  constructor( 
+    // private menuCtrl: MenuController,               
+    private dataService: DataService 
+  ) { }
 
   ngOnInit() {
     this.componentes = this.dataService.getMenuOpts();
   }
 
-  mostrarMenu() {
-    this.menuCtrl.open('first');
-  }
+  // mostrarMenu() {
+  //   this.menuCtrl.open('first');
+  // }
 
 }

@@ -17,6 +17,7 @@ export class ActionSheetPage implements OnInit {
     this.presentActionSheet();
   }
 
+  // backdropDismiss: Para que no cierre el actionSheet al pulsar fuera dle menú
   async presentActionSheet() {
     const actionSheet = await this.actionSheetCtrl.create({
       header: 'Albumes',

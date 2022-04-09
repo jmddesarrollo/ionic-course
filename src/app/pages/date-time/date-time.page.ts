@@ -13,15 +13,15 @@ export class DateTimePage implements OnInit {
   customPickerOptions = {
     buttons: [
       {
-        text: 'Hola',
+        text: 'Guardar',
         handler: ( event ) => {
           console.log(event);
         }
       },
       {
-        text: 'Mundo',
+        text: 'Cancelar',
         handler: () => {
-          console.log('log!')
+          console.log('Cancelado!')
         }
       },
     ]

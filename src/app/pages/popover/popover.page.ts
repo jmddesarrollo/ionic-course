@@ -16,6 +16,7 @@ export class PopoverPage implements OnInit {
 
   async presentPopover(ev: any) {
     
+    // Con backdropDismiss fuerza a elegir una opción sin cerrar Popover al pulsar fuera
     const popover = await this.popoverCtrl.create({
       component: PopoverInfoComponent,
       event: ev,

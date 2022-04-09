@@ -31,18 +31,14 @@ export class SlidesPage implements OnInit {
     }
   ];
 
-  
-
-
   constructor( private navCtrl: NavController ) { }
 
   ngOnInit() {
   }
 
   onClick() {
-
+    // Se puede usar mejor el router de Angular, pero este de Ionic funciona bien
     this.navCtrl.navigateBack('/');
-
   }
 
 }

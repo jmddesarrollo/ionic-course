@@ -13,7 +13,6 @@ export class ToastPage implements OnInit {
   ngOnInit() {
   }
 
-
   async presentToast() {
     const toast = await this.toastCtrl.create({
       message: 'Your settings have been saved.',

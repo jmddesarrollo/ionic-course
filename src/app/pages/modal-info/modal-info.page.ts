@@ -8,9 +8,9 @@ import { ModalController } from '@ionic/angular';
 })
 export class ModalInfoPage implements OnInit {
 
+  // Recoger información del componente padre que crea el Modal
   @Input() nombre: string;
   @Input() pais: string;
-
 
   constructor( private modalCtrl: ModalController ) { }
 

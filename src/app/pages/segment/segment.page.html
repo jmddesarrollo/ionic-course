@@ -1,3 +1,5 @@
+<!-- Se coloca el componente 'segment' dentro del 'header' para que sea fijo -->
+<!-- Si se coloca en el 'content' los segment forman parte del scroll y no se fija como cabecera -->
 <ion-header>
   <ion-toolbar>
 
@@ -21,8 +23,7 @@
     <ion-segment-button value="Marvel Comics">
       <ion-label>Marvel Comics</ion-label>
     </ion-segment-button>
-
-
+    
   </ion-segment>
 
 
@@ -30,11 +31,8 @@
 
 <ion-content>
 
-  
-
   <ion-list>
-    <ion-item *ngFor="let heroe of ( superHeroes | async ) | filtro:publisher:'publisher'"
-              class="animate__animated animate__fadeIn animate__faster">
+    <ion-item *ngFor="let heroe of ( superHeroes ) | filtro:publisherSegment:'publisher'">
       <ion-label>
         <h3>{{ heroe.superhero }} <small> {{ heroe.alter_ego }} </small> </h3>
         <p>
@@ -49,7 +47,7 @@
   </ion-list>
 
 
-  <ion-list *ngIf="( superHeroes | async ) === null ">
+  <ion-list *ngIf="loadingData">
     <ion-item *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1]">
       <ion-label>
         <h3>

@@ -13,6 +13,7 @@ export class AlertPage implements OnInit {
   ngOnInit() {
   }
 
+  // backdropDismiss: Para que no cierre el actionSheet al pulsar fuera dle menú
   async presentAlert() {
     const alert = await this.alertCtrl.create({
       backdropDismiss: false,
@@ -25,6 +26,7 @@ export class AlertPage implements OnInit {
     await alert.present();
   }
 
+  // Role: cancelar. Sin handler para generar acción porque cierra la ventana (tiene su propio handler interno)
   async presentAlertMultipleButtons() {
     const alert = await this.alertCtrl.create({
       header: 'Alert',

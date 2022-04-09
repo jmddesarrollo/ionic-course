@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GridPage implements OnInit {
 
+  // Grid docum
+  // https://ionicframework.com/docs/layout/grid
+
+  // fixed
+  // Mantiene el tamaño de las tarjetas basado en las dimensiones del dispositivo
+
   constructor() { }
 
   ngOnInit() {
